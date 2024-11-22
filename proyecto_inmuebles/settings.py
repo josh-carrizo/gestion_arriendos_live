@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-jc(7@l86)3z9m!lkgnwrcg2nbg(5bif4rxt_rx_ejwn=4k2gpb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gestion-arriendos-live.onrender.com']
 
 
 # Application definition
@@ -132,3 +132,4 @@ LOGOUT_REDIRECT_URL = '/login/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
