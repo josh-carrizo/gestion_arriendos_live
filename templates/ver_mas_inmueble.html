@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ inmueble.nombre }}</h1>
+    
+    <div>
+      <p><strong>Descripción:</strong> {{ inmueble.descripcion }}</p>
+      <p><strong>Metros construidos:</strong> {{ inmueble.metros_construidos }}</p>
+      <p><strong>Metros totales:</strong> {{ inmueble.metros_totales }}</p>
+      <p><strong>Cantidad de estacionamientos:</strong> {{ inmueble.cantidad_estacionamientos }}</p>
+      <p><strong>Cantidad de habitaciones:</strong> {{ inmueble.cantidad_habitaciones }}</p>
+      <p><strong>Cantidad de baños:</strong> {{ inmueble.cantidad_banos }}</p>
+      <p><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+      <p><strong>Comuna:</strong> {{ inmueble.comuna.nombre_comuna }}</p>
+      <p><strong>Codigo Postal:</strong>  {{ inmueble.comuna.codigo_postal }}</p>
+      <p><strong>Nombre de la Región:</strong>  {{ inmueble.comuna.region.nombre_region }}</p>
+      <p><strong>Numero de la región:</strong> {{ inmueble.comuna.region.numero_region }} </p>
+      <p><strong>Tipo de inmueble:</strong> {{ inmueble.tipo_inmueble }}</p>
+      <p><strong>Precio mensual:</strong> {{ inmueble.precio_mensual }} CLP</p>
+      <p><strong>Publicacion realizada por:</strong> {{ inmueble.arrendador.nombres }} {{ inmueble.arrendador.apellidos }}</p>
+      <div class="px-5"> 
+        <ul class="">
+          <li><strong>Nombre Usuario:</strong> {{ inmueble.arrendador.usuario }}</li>
+          <li><strong>Numero de contacto:</strong> {{ inmueble.arrendador.telefono }}</li>
+          <li><strong>Email:</strong> {{ inmueble.arrendador.email }}</li>
+        </ul>
+      </div>
+      <p><strong>Fecha de creación:</strong> {{ inmueble.fecha_creacion }}</p>
+      <p><strong>Última modificación:</strong> {{ inmueble.ultima_modificacion}}</p>
+
+      
+      {% if inmueble.imagen %}
+        <img src="{{ inmueble.imagen.url }}" alt="Imagen del inmueble" style="width:100%; max-width: 600px;"/>
+      {% endif %}
+      
+      <a href="{% url 'home' %}" class="btn btn-secondary">Volver a la lista</a>
+    </div>
+  </div>
+{% endblock %}

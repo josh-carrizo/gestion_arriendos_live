@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>¿Estás seguro de que deseas eliminar este inmueble?</h1>
+    <p><strong>{{ inmueble.nombre }}</strong></p>
+    <p><strong>Precio:</strong> {{ inmueble.precio_mensual }} CLP</p>
+    <p><strong>Comuna:</strong> {{ inmueble.comuna.nombre_comuna }}</p>
+    <p><strong>Región:</strong> {{ inmueble.comuna.region.nombre_region }}</p>
+    
+    <form method="POST">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+      <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+{% endblock %}

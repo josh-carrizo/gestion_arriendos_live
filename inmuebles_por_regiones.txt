@@ -1,0 +1,22 @@
+Región: Valparaíso
+  - Nombre: Prueba arriendo casa 1
+    Descripción: Prueba 1 Tipo casa
+
+Región: Metropolitana de Santiago
+  - Nombre: Casa en La Florida
+    Descripción: Casa familiar cerca de colegios y centros comerciales.
+  - Nombre: Departamento en Las Condes
+    Descripción: Departamento de lujo con gimnasio y piscina.
+  - Nombre: Parcela en Melipilla
+    Descripción: Amplia parcela para eventos, con quincho y piscina.
+  - Nombre: Casa en Ñuñoa
+    Descripción: Casa recién remodelada con excelente ubicación.
+  - Nombre: Parcela en Pirque
+    Descripción: Hermosa parcela con piscina y áreas verdes.
+  - Nombre: Departamento en Providencia
+    Descripción: Moderno departamento con vista al parque.
+  - Nombre: Departamento en Recoleta
+    Descripción: Departamento céntrico con acceso a transporte público.
+  - Nombre: Casa en Santiago Centro
+    Descripción: Amplia casa con jardín en el corazón de Santiago.
+

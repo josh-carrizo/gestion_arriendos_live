@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Publicaciones</h1>
+
+<div class="row mb-4">
+    <div class="col-12 col-md-6">
+        <form method="get" class="mb-4">
+            <select name="tipo_inmueble" class="form-select" onchange="this.form.submit()">
+                <option value="">Seleccione un tipo de inmueble</option>
+                <option value="Casa" {% if tipo_inmueble == 'Casa' %}selected{% endif %}>Casa</option>
+                <option value="Departamento" {% if tipo_inmueble == 'Departamento' %}selected{% endif %}>Departamento</option>
+                <option value="Parcela" {% if tipo_inmueble == 'Parcela' %}selected{% endif %}>Parcela</option>
+            </select>
+        </form>
+    </div>
+    <div class="col-12 col-md-6">
+        <form method="get" class="mb-4">
+            <select name="ordenar_por_fecha" class="form-select" onchange="this.form.submit()">
+                <option value="desc" {% if ordenar_por_fecha == 'desc' %}selected{% endif %}>Desde el más nuevo</option>
+                <option value="asc" {% if ordenar_por_fecha == 'asc' %}selected{% endif %}>Desde el más antiguo</option>
+            </select>
+        </form>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    {% for inmueble in inmuebles %}
+    
+    <div class="col">
+        <div class="card h-100">
+            <img src="/static/img/default.jpg" class="card-img-top" alt="{{ inmueble.nombre }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                <p class="card-text">{{ inmueble.descripcion|truncatechars:100 }}</p>
+                <div>
+                    <ul class="list-unstyled">
+                        <li><strong>Precio:</strong> {{ inmueble.precio_mensual }} CLP</li>
+                        <li><strong>Comuna:</strong> {{ inmueble.comuna.nombre_comuna }}</li>
+                        <li><strong>Región:</strong> {{ inmueble.comuna.region.nombre_region }}</li>
+                    </ul>
+                </div>
+
+                {% if inmueble.arrendador.usuario == request.user %}
+                    <a href="{% url 'editar_inmueble' inmueble.id %}" class="btn btn-warning">Editar</a>
+                    <a href="{% url 'eliminar_inmueble' inmueble.id %}" class="btn btn-danger">Eliminar</a>
+                    <p><strong>Dueño anuncio:</strong> {{ inmueble.arrendador.nombres }} {{ inmueble.arrendador.apellidos }}</p>
+                {% endif %}
+                {% if inmueble.arrendador.usuario != request.user %}
+                <a href="{% url 'ver_mas_inmueble' inmueble.id %}" class="btn btn-primary">Ver más</a>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <p><strong>Perfil:</strong> {{ inmueble.arrendador.tipo_usuario }}</p>
+                {% else %}
+                <p><strong>Perfil:</strong> No ha iniciado sesión. <a href="{% url 'login' %}">Iniciar sesión</a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No hay publicaciones disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}

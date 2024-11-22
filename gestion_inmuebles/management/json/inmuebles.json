@@ -1,0 +1,117 @@
+{
+    "inmuebles": [
+      {
+        "nombre": "Casa en Santiago Centro",
+        "descripcion": "Amplia casa con jardín en el corazón de Santiago.",
+        "metros_construidos": 120.50,
+        "metros_totales": 200.00,
+        "cantidad_estacionamientos": 2,
+        "cantidad_habitaciones": 4,
+        "cantidad_banos": 3,
+        "direccion": "Av. Libertador Bernardo O'Higgins 123",
+        "comuna_id": 1,
+        "tipo_inmueble": "Casa",
+        "precio_mensual": 850000,
+        "arrendador_id": 1
+      },
+      {
+        "nombre": "Departamento en Providencia",
+        "descripcion": "Moderno departamento con vista al parque.",
+        "metros_construidos": 80.00,
+        "metros_totales": 90.00,
+        "cantidad_estacionamientos": 1,
+        "cantidad_habitaciones": 2,
+        "cantidad_banos": 2,
+        "direccion": "Calle Las Palmas 456",
+        "comuna_id": 2,
+        "tipo_inmueble": "Departamento",
+        "precio_mensual": 750000,
+        "arrendador_id": 2
+      },
+      {
+        "nombre": "Parcela en Pirque",
+        "descripcion": "Hermosa parcela con piscina y áreas verdes.",
+        "metros_construidos": 250.00,
+        "metros_totales": 5000.00,
+        "cantidad_estacionamientos": 4,
+        "cantidad_habitaciones": 6,
+        "cantidad_banos": 4,
+        "direccion": "Camino Los Álamos 1234",
+        "comuna_id": 3,
+        "tipo_inmueble": "Parcela",
+        "precio_mensual": 1500000,
+        "arrendador_id": 3
+      },
+      {
+        "nombre": "Casa en La Florida",
+        "descripcion": "Casa familiar cerca de colegios y centros comerciales.",
+        "metros_construidos": 110.00,
+        "metros_totales": 150.00,
+        "cantidad_estacionamientos": 1,
+        "cantidad_habitaciones": 3,
+        "cantidad_banos": 2,
+        "direccion": "Pasaje Los Olivos 789",
+        "comuna_id": 1,
+        "tipo_inmueble": "Casa",
+        "precio_mensual": 700000,
+        "arrendador_id": 4
+      },
+      {
+        "nombre": "Departamento en Las Condes",
+        "descripcion": "Departamento de lujo con gimnasio y piscina.",
+        "metros_construidos": 100.00,
+        "metros_totales": 120.00,
+        "cantidad_estacionamientos": 2,
+        "cantidad_habitaciones": 3,
+        "cantidad_banos": 2,
+        "direccion": "Av. Kennedy 4567",
+        "comuna_id": 2,
+        "tipo_inmueble": "Departamento",
+        "precio_mensual": 1200000,
+        "arrendador_id": 1
+      },
+      {
+        "nombre": "Casa en Ñuñoa",
+        "descripcion": "Casa recién remodelada con excelente ubicación.",
+        "metros_construidos": 130.00,
+        "metros_totales": 180.00,
+        "cantidad_estacionamientos": 2,
+        "cantidad_habitaciones": 4,
+        "cantidad_banos": 3,
+        "direccion": "Calle Los Robles 123",
+        "comuna_id": 4,
+        "tipo_inmueble": "Casa",
+        "precio_mensual": 950000,
+        "arrendador_id": 2
+      },
+      {
+        "nombre": "Parcela en Melipilla",
+        "descripcion": "Amplia parcela para eventos, con quincho y piscina.",
+        "metros_construidos": 300.00,
+        "metros_totales": 6000.00,
+        "cantidad_estacionamientos": 5,
+        "cantidad_habitaciones": 8,
+        "cantidad_banos": 5,
+        "direccion": "Camino El Molino 567",
+        "comuna_id": 3,
+        "tipo_inmueble": "Parcela",
+        "precio_mensual": 2000000,
+        "arrendador_id": 3
+      },
+      {
+        "nombre": "Departamento en Recoleta",
+        "descripcion": "Departamento céntrico con acceso a transporte público.",
+        "metros_construidos": 60.00,
+        "metros_totales": 65.00,
+        "cantidad_estacionamientos": 1,
+        "cantidad_habitaciones": 2,
+        "cantidad_banos": 1,
+        "direccion": "Calle Los Naranjos 789",
+        "comuna_id": 4,
+        "tipo_inmueble": "Departamento",
+        "precio_mensual": 550000,
+        "arrendador_id": 4
+      }
+    ]
+  }
+  

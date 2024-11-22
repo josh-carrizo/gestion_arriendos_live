@@ -1,0 +1,36 @@
+Comuna: Concón
+  - Nombre: Prueba arriendo casa 1
+    Descripción: Prueba 1 Tipo casa
+
+Comuna: La Florida
+  - Nombre: Casa en La Florida
+    Descripción: Casa familiar cerca de colegios y centros comerciales.
+
+Comuna: Las Condes
+  - Nombre: Departamento en Las Condes
+    Descripción: Departamento de lujo con gimnasio y piscina.
+
+Comuna: Melipilla
+  - Nombre: Parcela en Melipilla
+    Descripción: Amplia parcela para eventos, con quincho y piscina.
+
+Comuna: Ñuñoa
+  - Nombre: Casa en Ñuñoa
+    Descripción: Casa recién remodelada con excelente ubicación.
+
+Comuna: Pirque
+  - Nombre: Parcela en Pirque
+    Descripción: Hermosa parcela con piscina y áreas verdes.
+
+Comuna: Providencia
+  - Nombre: Departamento en Providencia
+    Descripción: Moderno departamento con vista al parque.
+
+Comuna: Recoleta
+  - Nombre: Departamento en Recoleta
+    Descripción: Departamento céntrico con acceso a transporte público.
+
+Comuna: Santiago
+  - Nombre: Casa en Santiago Centro
+    Descripción: Amplia casa con jardín en el corazón de Santiago.
+
