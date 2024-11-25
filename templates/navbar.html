@@ -1,6 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Encuentra tu jom</a>
+        <a class="navbar-brand" href="{% url 'home' %}">
+            {% load static %}
+            <img src="{% static 'img/logo.png' %}" alt="logo " class="logo">
+
+        </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -13,9 +17,12 @@
               <li class="nav-item">
                   <a class="nav-link" href="{% url 'editar_perfil' %}">Editar perfil</a>
               </li>
+              {% if user.is_authenticated and user.perfil.tipo_usuario == 'Arrendador' %}
               <li class="nav-item">
-                  <a class="nav-link" href="{% url 'crear_inmueble' %}">Crear inmueble</a>
+                  <a class="nav-link" href="{% url 'crear_inmueble' %}">Crear Inmueble</a>
               </li>
+              {% endif %}
+              
               <li class="nav-item">
                   <form method="post" action="{% url 'logout' %}" style="display:inline;">
                       {% csrf_token %}

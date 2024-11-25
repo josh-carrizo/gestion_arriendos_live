@@ -32,7 +32,8 @@
     
     <div class="col">
         <div class="card h-100">
-            <img src="/static/img/default.jpg" class="card-img-top" alt="{{ inmueble.nombre }}">
+            {% load static %}
+            <img src="{% static 'img/default.jpg' %}" class="card-img-top" alt="{{ inmueble.nombre }}">
             <div class="card-body">
                 <h5 class="card-title">{{ inmueble.nombre }}</h5>
                 <p class="card-text">{{ inmueble.descripcion|truncatechars:100 }}</p>

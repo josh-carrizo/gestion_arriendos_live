@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-jc(7@l86)3z9m!lkgnwrcg2nbg(5bif4rxt_rx_ejwn=4k2gpb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gestion-arriendos-live.onrender.com']
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','127.0.0.1:8000','gestion-arriendos-live.onrender.com']
 
 
 # Application definition
@@ -121,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATICFILES_DIRS = [BASE_DIR / "./gestion_inmuebles/static"]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
