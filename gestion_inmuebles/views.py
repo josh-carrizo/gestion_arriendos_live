@@ -39,10 +39,20 @@ def home(request):
         inmuebles = inmuebles.filter(tipo_inmueble=tipo_inmueble)
     
     if ordenar_por_fecha == 'asc':
-        inmuebles = inmuebles.order_by('fecha_creacion')  # Orden ascendente (más antiguos primero)
+        inmuebles = inmuebles.order_by('fecha_creacion')  
     else:
-        inmuebles = inmuebles.order_by('-fecha_creacion')  # Orden descendente (más nuevos primero)
+        inmuebles = inmuebles.order_by('-fecha_creacion')  
     
+    for inmueble in inmuebles:
+        if inmueble.tipo_inmueble == 'Casa':
+            inmueble.image_url = 'img/default.jpg'
+        elif inmueble.tipo_inmueble == 'Departamento':
+            inmueble.image_url = 'img/depa.jpg'
+        elif inmueble.tipo_inmueble == 'Parcela':
+            inmueble.image_url = 'img/parcela.jpg'
+        else:
+            inmueble.image_url = 'img/default.jpg'
+
     regiones = Region.objects.all()
     return render(request, 'home.html', {
         'inmuebles': inmuebles,
@@ -50,6 +60,7 @@ def home(request):
         'tipo_inmueble': tipo_inmueble,
         'ordenar_por_fecha': ordenar_por_fecha
     })
+
 
 def crear_inmueble(request):
     if request.method == 'POST':

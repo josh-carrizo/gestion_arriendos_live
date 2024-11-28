@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Inicio{% endblock %}
 
@@ -32,8 +33,9 @@
     
     <div class="col">
         <div class="card h-100">
-            {% load static %}
-            <img src="{% static 'img/default.jpg' %}" class="card-img-top" alt="{{ inmueble.nombre }}">
+            <div class="image-container text-center">
+                <img src="{% static '' %}{{ inmueble.image_url }}" alt="{{ inmueble.nombre }}" class="inmueble-img">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">{{ inmueble.nombre }}</h5>
                 <p class="card-text">{{ inmueble.descripcion|truncatechars:100 }}</p>

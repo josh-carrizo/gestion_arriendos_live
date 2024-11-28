@@ -69,3 +69,30 @@ nav {
     border-color: white; 
 }
 
+.texto-formulario{
+    color: white;
+}
+.image-container {
+    max-height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inmueble-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.img-header {
+    width: 100%;
+    object-fit: cover;
+    height: 20em;
+}
+
+footer {
+    background-color: #16a085
+}
