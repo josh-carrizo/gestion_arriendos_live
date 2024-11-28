@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-jc(7@l86)3z9m!lkgnwrcg2nbg(5bif4rxt_rx_ejwn=4k2gpb
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','127.0.0.1:8000','gestion-arriendos-live.onrender.com','https://proyecto-only-flans-u147.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','127.0.0.1:8000','gestion-arriendos-live.onrender.com']
 
 
 # Application definition
